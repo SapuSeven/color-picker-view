@@ -1,4 +1,6 @@
-# ColorPickerView
+# ColorPickerView 
+[![](https://jitpack.io/v/SapuSeven/color-picker-view.svg)](https://jitpack.io/#SapuSeven/color-picker-view)
+
 **A simple good looking color picker component for Android**
 
 A color picker is something that has always been missing from the standard set of components which developers can build their user interface in Android with.
@@ -13,19 +15,43 @@ You can still use this library for any other projects to benefit from the modifi
 <img src="https://cloud.githubusercontent.com/assets/5458667/7705689/07a0673e-fe46-11e4-94c8-49a980e7d1b5.png" alt="Screenshot2" width="460">
 
 ## How to use
-For doumentation about how to use the library, check the demo app included in this project.
+You can use JitPack to quickly include this project.
 
-There are basicly three different ways to use this color picker. You can add it to your preferences using the ColorPreference class. You can also use it as a DialogFragment using the ColorPickerDialogFragment. Or you can simply use the ColorPickerView to add the color picker anywhere you want in you application. All three cases are demonstrated in the demo app, please refer to the demo for more information.
+**Step 1: Add the JitPack repository to your build file**
+
+Add this in your root build.gradle at the end of repositories:
+
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+
+**Step 2: Add the dependency**
+
+This goes into the module-level build.gradle dependencies:
+
+	dependencies {
+	    ...
+	    implementation 'com.github.SapuSeven:color-picker-view:v1.5.0'
+	}
+
+
+For documentation about how to use the library, check the demo app included in this project.
+
+There are basically three different ways to use this color picker. You can add it to your preferences using the ColorPreference class. You can also use it as a DialogFragment using the ColorPickerDialogFragment. Or you can simply use the ColorPickerView to add the color picker anywhere you want in you application. All three cases are demonstrated in the demo app, please refer to the demo for more information.
 
 ## Changelog
 
 ### Version 1.5.0
 - Added hexadecimal input for dialog pickers (by [@andre99](https://github.com/andre99/color-picker-view))
 - Prepared for the use with my own projects
+- Removed JCenter publishing (use JitPack as described above instead)
 
 ### Version 1.4.0
-- Change of package name due to problem with jcenter publish. New package name is: com.github.danielnilsson9.colorpickerview, sorry for the inconvenience.
-- Fix for project could not be built due to obsolet android build tool version used.
+- Change of package name due to problem with JCenter publish. New package name is: com.github.danielnilsson9.colorpickerview, sorry for the inconvenience.
+- Fix for project could not be built due to obsolete android build tool version used.
 
 ### Version 1.3.0
 - Bugfix: Selected Hue value in hue panel did not perfectly match what was shown in in the Saturation/Value panel.
